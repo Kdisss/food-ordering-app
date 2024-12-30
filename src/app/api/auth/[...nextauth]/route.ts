@@ -31,6 +31,7 @@ export const handler = NextAuth({
           throw new Error("Invalid password.");
         }
 
+
         // Return the user object
         return {
           id: user._id,

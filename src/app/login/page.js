@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [loginInProgress, setLoginInProgress] = useState(false);
   const [error, setError] = useState(null);
+  const[status, setStatus] = useState("");
 
   async function handleFormSubmit(ev) {
     ev.preventDefault();
@@ -19,6 +20,7 @@ export default function LoginPage() {
     const result = await signIn("credentials", {
       email,
       password,
+      status,
       redirect: false, // Disable automatic redirect to allow custom error handling
     });
 
