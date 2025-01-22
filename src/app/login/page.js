@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function LoginPage() {
-  const { status } = useSession();
+  // const { status } = useSession();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginInProgress, setLoginInProgress] = useState(false);
@@ -21,7 +21,7 @@ export default function LoginPage() {
     const result = await signIn("credentials", {
       email,
       password,
-      status,
+      // status,
       redirect: false, // Disable automatic redirect to allow custom error handling
     });
 

@@ -7,7 +7,7 @@ export async function POST(req) {
     const body = await req.json();
 
     // Connect to MongoDB
-    await mongoose.connect(process.env.MONGO_URL, {
+    await mongoose.connect(process.env.MONGODB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
