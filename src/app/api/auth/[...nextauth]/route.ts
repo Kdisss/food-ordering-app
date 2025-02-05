@@ -18,7 +18,7 @@ export const handler = NextAuth({
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        name: { label: "Name", type: "name", placeholder: "username" },
+        
         email: { label: "Email", type: "email", placeholder: "test@example.com" },
         password: { label: "Password", type: "password" },
       },

@@ -63,7 +63,7 @@ export default function RegisterPage() {
       )}
       <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
         <input
-          type="name"
+          type="text"
           placeholder="name"
           value={name}
           disabled={creatingUser}
