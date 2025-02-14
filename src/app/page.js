@@ -6,6 +6,7 @@ import SectionHeaders from "../Components/layout/SectionHeaders";
 export default function Home() {
   return (
     <>
+     
       <Hero />
       <Homemenu />
       <section className="my-16 px-4 md:px-0">
@@ -16,7 +17,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - About Us Content */}
-          <div>
+          <div className="mr-10">
             <SectionHeaders subHeader="Our story" mainHeader="About us" />
             <div className="text-gray-500 mt-4 flex flex-col gap-4">
               <p>

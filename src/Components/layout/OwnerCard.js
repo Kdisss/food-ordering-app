@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
     height: 280px;
     background: #f5f5f5;
     padding: 2rem 1.5rem;
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    transition: box-shadow 0.5s ease, transform 0.2s ease;
   }
 
   .card-info {
@@ -129,6 +129,7 @@ const StyledWrapper = styled.div`
 
   .card-avatar:hover {
     transform: scale(1.1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 `;
 

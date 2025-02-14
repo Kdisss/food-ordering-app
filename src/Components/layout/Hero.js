@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Right from "../Icons/Right";
 
+
 export default function Hero(){
     return(
         <section className="hero mt-4">
+            
             <div className="py-12">
             <h1 className="text-4xl font-semibold">
                 Everything is better with a&nbsp; 

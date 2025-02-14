@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import dbConnect from "../../../utils/dbConnect";
 import Food from "../../../app/models/food";
@@ -22,17 +21,20 @@ export async function POST(req) {
   await dbConnect();
   try {
     const body = await req.json();
-    const { name, description, price } = body;
+    const { name, description, price, image } = body; // Include image
 
-    if (!name || !description || !price) {
-      return NextResponse.json({ success: false, message: "All fields are required" }, { status: 400 });
+    if (!name || !description || !price || !image) {
+      return NextResponse.json(
+        { success: false, message: "All fields are required" },
+        { status: 400 }
+      );
     }
 
-    const newFood = await Food.create({ name, description, price });
+    const newFood = await Food.create({ name, description, price, image });
+
     return NextResponse.json({ success: true, data: newFood }, { status: 201 });
   } catch (error) {
     console.error("❌ Error in POST /api/food:", error.message);
     return NextResponse.json({ success: false, message: error.message }, { status: 500 });
   }
 }
-
